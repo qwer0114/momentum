@@ -1,0 +1,19 @@
+@import "/components/screen.css";
+@import "/components/header.css";
+@import "/components/profile.css";
+@import "/components/playing-bar.css";
+
+@import "/screen/list.css";
+@import "/screen/play-time.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 1000vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke font-family: 'Nunito', sans-serif;
+}
