@@ -7,4 +7,4 @@ const todayImage = img[Math.floor(Math.random() * img.length)];
 const bgImage = document.createElement("img");
 bgImage.src = "img/" + todayImage;
 
-document.body.appendChild(bgImage);
+document.querySelector("body").style.backgroundImage = "url" + "(" + "'" + bgImage.src + "'" + ")";

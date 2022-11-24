@@ -1,10 +1,22 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
+const toDolabel = document.querySelector("#todoLable");
 
 const TODOS_KEY = "todos";
 
 let toDos = [];
+
+toDoInput.addEventListener("mouseenter", handleToDoInput);
+toDoInput.addEventListener("mouseleave", handleMouseleave);
+
+function handleToDoInput() {
+    toDolabel.innerText = "";
+}
+
+function handleMouseleave() {
+    toDolabel.innerText = "What is your main focus for today?";
+}
 
 function saveToDos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
