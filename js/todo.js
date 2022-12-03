@@ -7,17 +7,6 @@ const TODOS_KEY = "todos";
 
 let toDos = [];
 
-toDoInput.addEventListener("mouseenter", handleToDoInput);
-toDoInput.addEventListener("mouseleave", handleMouseleave);
-
-function handleToDoInput() {
-    toDolabel.innerText = "";
-}
-
-function handleMouseleave() {
-    toDolabel.innerText = "What is your main focus for today?";
-}
-
 function saveToDos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
@@ -34,7 +23,7 @@ function paintToDo(newTodo) {
     const span = document.createElement("span");
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "❌";
+    button.innerText = "X";
     button.addEventListener("click", deleteTodo);
     li.appendChild(span);
     li.appendChild(button);
